@@ -7,6 +7,8 @@
 # General application configuration
 import Config
 
+config :mod_security_server, ash_domain: [MyAshPhoenixApp.Blog]
+
 config :ash,
   allow_forbidden_field_for_relationships_by_default?: true,
   include_embedded_source_by_default?: false,

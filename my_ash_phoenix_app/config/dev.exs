@@ -3,9 +3,9 @@ import Config
 # Configure your database
 config :my_ash_phoenix_app, MyAshPhoenixApp.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "example",
   hostname: "localhost",
-  database: "my_ash_phoenix_app_dev",
+  database: "postgres",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
