@@ -1,5 +1,6 @@
 import Config
 
+config :helpdesk, ecto_repos: [Helpdesk.Repo]
 config :helpdesk, :ash_domains, [Helpdesk.Support]
 
 config :ash,
@@ -18,6 +19,7 @@ config :spark,
     remove_parens?: true,
     "Ash.Resource": [
       section_order: [
+        :postgres,
         :resource,
         :code_interface,
         :actions,
@@ -36,3 +38,5 @@ config :spark,
     ],
     "Ash.Domain": [section_order: [:resources, :policies, :authorization, :domain, :execution]]
   ]
+
+import_config "#{config_env()}.exs"
